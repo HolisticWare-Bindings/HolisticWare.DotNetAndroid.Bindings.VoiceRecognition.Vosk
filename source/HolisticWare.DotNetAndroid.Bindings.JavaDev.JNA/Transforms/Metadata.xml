@@ -1,0 +1,58 @@
+﻿<metadata>
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+  <attr
+    path="/api/package[@name='com.sun.jna']/class[@name='JNIEnv']"
+    name="managedName"
+    >
+    JNIEnvSun
+  </attr>
+  <!--
+  <attr
+    path="/api/package[@name='com.sun.jna']/interface[@name='FromNativeConverter']/method[@name='nativeType' and count(parameter)=0]"
+    name="managedName"
+    >
+    NativeTypeFromNativeConverter
+  </attr>
+  <attr
+    path="/api/package[@name='com.sun.jna']/interface[@name='ToNativeConverter']/method[@name='nativeType' and count(parameter)=0]"
+    name="managedName"
+    >
+    NativeTypeToNativeConverter
+  </attr>
+  -->
+  <!--
+  <attr 
+    path="/api/package[@name='com.sun.jna']/interface[@name='TypeConverter']"
+    name="skipInvokerMethods"
+    >
+    com/sun/jna/ToNativeConverter.nativeType()Ljava/lang/Class;
+    com/sun/jna/FromNativeConverter.nativeType()Ljava/lang/Class;
+  </attr>
+  <attr 
+    path="/api/package[@name='com.sun.jna']/interface[@name='ToTypeConverter']"
+    name="skipInvokerMethods"
+    >
+    com/sun/jna/ToNativeConverter.nativeType()Ljava/lang/Class;
+  </attr>
+  <attr 
+    path="/api/package[@name='com.sun.jna']/interface[@name='FromTypeConverter']"
+    name="skipInvokerMethods"
+    >
+    com/sun/jna/FromNativeConverter.nativeType()Ljava/lang/Class;
+  </attr>
+  -->
+  <remove-node
+    path="/api/package[@name='com.sun.jna']/interface[@name='FromNativeConverter']/method[@name='nativeType' and count(parameter)=0]"
+    />
+  <remove-node
+    path="/api/package[@name='com.sun.jna']/interface[@name='ToNativeConverter']/method[@name='nativeType' and count(parameter)=0]"
+    />
+
+
+</metadata>
